@@ -1,0 +1,27 @@
+@mixin fastDisplay($a, $x, $y, $z) {
+  display: flex;
+  align-items: $a;
+  justify-content: $x;
+  flex-flow: $y $z;
+}
+
+$lime-green: #00dd80;
+
+.container-home {
+  @include fastDisplay(center, center, column, nowrap);
+  height: 100vh;
+  width: 100%;
+
+  .middle-box {
+    @include fastDisplay(flex-start, flex-start, column, nowrap);
+    padding-top: 5%;
+    height: 100%;
+    width: 527px;
+
+    .title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $lime-green;
+    }
+  }
+}

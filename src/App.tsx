@@ -1,11 +1,9 @@
 import React from "react";
+import Home from "./pages/home";
+import "./global.scss";
 
 function App() {
-  return (
-    <div className="h-screen flex items-center justify-center">
-      <h1>Welcome to the Adopt Challenge</h1>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;

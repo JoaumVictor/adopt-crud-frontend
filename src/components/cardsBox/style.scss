@@ -1,0 +1,12 @@
+@mixin fastDisplay($a, $x, $y, $z) {
+  display: flex;
+  align-items: $a;
+  justify-content: $x;
+  flex-flow: $y $z;
+}
+
+.containerCardsBox {
+  @include fastDisplay(center, flex-start, column, nowrap);
+  height: 100%;
+  width: 100%;
+}

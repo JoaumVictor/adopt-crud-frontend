@@ -1,0 +1,58 @@
+@mixin fastDisplay($a, $x, $y, $z) {
+  display: flex;
+  align-items: $a;
+  justify-content: $x;
+  flex-flow: $y $z;
+}
+
+$light-gray: #858585;
+
+.cardCookie {
+  @include fastDisplay(center, flex-start, row, nowrap);
+  margin-bottom: 10px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+
+  .leftCardCookieBox {
+    width: 25%;
+
+    img {
+      padding: 20px;
+      width: 100%;
+    }
+  }
+
+  .rightCardCookieBox {
+    width: 60%;
+
+    h4 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: black;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      color: $light-gray;
+    }
+  }
+
+  .trashBox {
+    width: 15%;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 20px;
+      width: 100%;
+
+      .trashIcon {
+        font-size: 26px;
+      }
+    }
+  }
+}
